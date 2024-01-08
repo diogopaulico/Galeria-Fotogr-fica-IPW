@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     font-family:Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
 }
 #fundo{
     width: 100%;
@@ -56,7 +57,6 @@
 .apresentacao h1{
     font-size: 50px;
 }
-/*Eduardo estive uma hora a tentar perceber porque é que a cor e texto não apareciam ao mesmo tempo e tudo porque me esqueci de mencionar o z do butão LOL*/
 .button{
     width: 200px;
     padding: 20px 0;
@@ -160,4 +160,11 @@ span{
     min-width: 100%;
     max-height: 160px;
     min-height: 80px;
+}
+#copyright{
+    background-color: rgba(60, 56, 56, 0.3);
+    color: rgb(255, 255, 255);
+    padding: 5%;
+    text-align: center;
+    font-style: italic;
 }
