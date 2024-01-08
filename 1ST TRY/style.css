@@ -1,0 +1,163 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family:Arial, Helvetica, sans-serif;
+}
+#fundo{
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(60, 56, 56, 0.7)),url(background.jpg);
+    background-size: cover;
+    background-position: center;
+}
+#menu{
+    width: 90%;
+    margin: auto;
+    padding: 30px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo{
+    height: 120px;
+    width: 200px;
+}
+#menu ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}
+#menu ul li a{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: rgb(255, 255, 255);
+}
+#menu ul li::after{
+    height: 4px;
+    width: 0px;
+    background: rgb(164, 87, 41);
+    position: absolute;
+    content: '';
+    left: 0;
+    bottom: -5px;
+    transition: 0.2s;
+}
+#menu ul li:hover::after{
+    width: 100%;
+}
+.apresentacao{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    text-align: center;
+    color: rgb(255, 255, 255);
+}
+.apresentacao h1{
+    font-size: 50px;
+}
+/*Eduardo estive uma hora a tentar perceber porque é que a cor e texto não apareciam ao mesmo tempo e tudo porque me esqueci de mencionar o z do butão LOL*/
+.button{
+    width: 200px;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 15px;
+    margin: 20px 10px;
+    font-weight: bold;
+    background: transparent;
+    color: rgb(255, 255, 255);
+    border: 2px solid rgb(164, 87, 41);
+    border-radius: 30px;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    cursor: pointer;
+}
+span{
+    background: rgb(164, 87, 41);
+    height: 100%;
+    width: 0%;
+    border-radius: 30px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: 0.4s;
+}
+.button:hover span{
+    width: 100%;
+}
+.button:hover{
+    border: none;
+}
+.photoPortrait{
+    padding: 30px 100px;
+    margin-top: -37%;
+}
+.photoPortrait img{
+    border-radius: 50%;
+}
+#apresentacaoDois{
+    max-width: 800px;
+    margin: 120px auto;
+    padding: 20px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+}
+#apresentacaoDois h1{
+    font-size: 50px;
+}
+#apresentacaoDois p{
+    margin-top: 30px;
+    font-size: 18px;
+}
+#imagens{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+#imagens img{
+  width: 200px;
+  height: auto;
+  border-radius: 20px;
+  padding: 5px;
+  transition: 0.4s;
+  cursor: pointer;
+  filter: blur(5px);
+}
+#imagens img:hover{
+  scale: 1.3;
+  z-index: 1;
+}
+.formulario{
+    width: 80%;
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+    margin: auto;
+    border-radius: 10px;
+}
+.formulario p{
+    font-weight: bold;
+    margin-top: 10px;
+}
+.textoform{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+#sugestao{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    height: 80px;
+    border: 1.8px solid rgb(0,0,0);
+    max-width: 100%;
+    min-width: 100%;
+    max-height: 160px;
+    min-height: 80px;
+}

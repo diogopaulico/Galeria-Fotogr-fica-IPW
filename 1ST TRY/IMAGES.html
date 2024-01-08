@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title>Galeria Fotografica</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" href="logo.png">
+    </head>
+    <body>
+        <div id="fundo">
+            <div id="menu">
+                <img src="logo2.png" class="logo" alt="Logo" width="300px" height="150px">
+                <ul>
+                    <li><a href="HOME.html">HOME</a></li>
+                    <li><a href="IMAGES.html">IMAGENS</a></li>
+                    <li><a href="CONTACTOS.html">CONTACTOS</a></li>
+                </ul>
+            </div>
+            <script>
+                function changeImage(element) {
+                    element.style.filter = "none";
+                }
+                function restoreImage(element) {
+                    element.style.filter = "blur(5px)";
+                }
+            </script>
+            <div id="imagens">
+                <img src="cravoamarelo.jpeg" alt="Foto" onclick="changeImage(this)" onmouseout="restoreImage(this)">
+                <img src="floreslaranja.jpeg" alt="Foto" onclick="changeImage(this)" onmouseout="restoreImage(this)">
+                <img src="florjanela.JPG" alt="Foto" onclick="changeImage(this)" onmouseout="restoreImage(this)">
+                <img src="florroxa.jpeg" alt="Foto" onclick="changeImage(this)" onmouseout="restoreImage(this)">
+                <img src="margaridaroxa.jpeg" alt="Foto" onclick="changeImage(this)" onmouseout="restoreImage(this)">
+                <img src="pendaoroxo.jpeg" alt="Foto" onclick="changeImage(this)" onmouseout="restoreImage(this)">
+                <img src="trigal.jpeg" alt="Foto" onclick="changeImage(this)" onmouseout="restoreImage(this)">
+            </div>
+        </div>
+    </body>
+</html>
