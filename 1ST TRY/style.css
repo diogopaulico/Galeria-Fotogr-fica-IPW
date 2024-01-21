@@ -6,8 +6,9 @@
 }
 #fundo{
     width: 100%;
-    height: 100vh;
-    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(60, 56, 56, 0.7)),url(background.jpg);
+    height: auto;
+    min-height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(60, 56, 56, 0.7)),url(img_geral/background.jpg);
     background-size: cover;
     background-position: center;
 }
@@ -90,9 +91,15 @@ span{
 .button:hover{
     border: none;
 }
+.grupo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 .photoPortrait{
     padding: 30px 100px;
-    margin-top: -37%;
+    margin-top: 0;
+    order: -1;
 }
 .photoPortrait img{
     border-radius: 50%;
@@ -111,6 +118,23 @@ span{
     margin-top: 30px;
     font-size: 18px;
 }
+/* Codigo para a div que criei para a lightbox */
+#lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+#lightbox-img {
+    max-width: 90%;
+    max-height: 90%;
+}
 #imagens{
     width: 80%;
     display: flex;
@@ -126,7 +150,6 @@ span{
   padding: 5px;
   transition: 0.4s;
   cursor: pointer;
-  filter: blur(5px);
 }
 #imagens img:hover{
   scale: 1.3;
@@ -169,4 +192,60 @@ span{
     bottom: 0;
     width: 100%;
     font-style: italic;
+}
+
+/* Estilos para telas com largura de até 600px */
+@media (max-width: 600px) {
+    #menu{
+        flex-direction: column;
+        padding: 0 10px;
+    }
+    .logo{
+        height: 80px;
+        width: 150px;
+    }
+    #menu ul li{
+        margin: 10px 0;
+        padding: 0 10px;
+    }
+    .apresentacao h1{
+        font-size: 30px;
+    }
+    .button{
+        width: 150px;
+        padding: 10px 0;
+        font-size: 12px;
+    }
+    .photoPortrait{
+        padding: 85px 50px;
+        margin-top: 0;
+    }
+    .photoPortrait img{
+        width: 200px;
+        height: 200px;
+    }
+    #apresentacaoDois{
+        margin: 60px auto;
+        padding: 10px;
+    }
+    #apresentacaoDois h1{
+        font-size: 30px;
+    }
+    #apresentacaoDois p{
+        font-size: 16px;
+    }
+    #imagens{
+        width: 100%;
+    }
+    #imagens img{
+        width: 150px;
+    }
+    .formulario{
+        width: 100%;
+    }
+    #sugestao{
+        height: auto;
+        max-height: none;
+        min-height: none;
+    }
 }
