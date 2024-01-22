@@ -194,7 +194,7 @@ span{
     font-style: italic;
 }
 
-/* Estilos para telas com largura de até 600px */
+/* Estilo para telas até 600px */
 @media (max-width: 600px) {
     #menu{
         flex-direction: column;

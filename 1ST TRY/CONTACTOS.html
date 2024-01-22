@@ -5,6 +5,12 @@
         <title>Galeria Fotografica</title>
         <link rel="stylesheet" href="style.css">
         <script src="script.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+        <script type="text/javascript">
+            (function() {
+                emailjs.init("XA1J2sqj4Aqm5p7VB");
+            })();
+        </script>
         <link rel="icon" href="img_geral/logo.png">
     </head>
     <body>
@@ -17,15 +23,13 @@
                     <li><a href="CONTACTOS.html">CONTACTOS</a></li>
                 </ul>
             </div>
-            <div class="formulario">
-                <form>
+            <div class="formulario"> 
                     <h2>Envie as suas sugestões!</h2>
                     <p>Nome: <input type="text" class="textoform" id="nome"></p>
-                    <p>Email: <input type="email" class="textoform" id="mail"></p>
+                    <p>Email: <input type="text" class="textoform" id="mail"></p>
                     <p>Sugestões: <textarea id="sugestao"></textarea></p>
                     <button type="submit" style="color: rgb(0, 0, 0);" class="button" onclick="mensagem()"><span></span>ENVIAR</button>
-                    <button type="reset" style="color: rgb(0, 0, 0);" class="button" onclick="limpar()"><span></span>LIMPAR</button>
-                </form>
+                    <button type="reset" style="color: rgb(0, 0, 0);" class="button" onclick="limpar()"><span></span>LIMPAR</button> 
             </div>
             <footer id="copyright">
                 <p>© Copyright 2024 Galeria Fotográfica. All rights reserved.</p>
